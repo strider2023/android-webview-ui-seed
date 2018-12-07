@@ -1,0 +1,87 @@
+<md-toolbar class="md-whiteframe-1dp">
+  <div class="md-toolbar-tools">
+    <h2 flex class='white-text'>ESF Form</h2>
+    <md-button class="md-icon-button" aria-label="More" ng-click="showAlert($event)">
+      <i class="material-icons">info_outline</i>
+    </md-button>
+  </div>
+</md-toolbar>
+
+<md-content flex layout="row" class="p-10" layout-align="center center" ng-if="!isMainVisible">
+  <md-progress-circular class="md-warn md-hue-3" md-diameter="100"></md-progress-circular>
+</md-content>
+
+<md-content class="p-10" style="overflow-y: scroll" ng-if="isMainVisible">
+  <md-card class="m-b-10 md-whiteframe-4dp">
+    <img id="profileImage" ng-src="{{user.image}}" class="md-card-image" alt="Washed Out">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">Upload Image Card</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+      <p>
+        Please upload your image.
+      </p>
+    </md-card-content>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button class="md-icon-button" aria-label="Share" ng-click="clickImage('profileImage');">
+        <i class="material-icons red-text">camera_alt</i>
+      </md-button>
+      <md-button class="md-icon-button" aria-label="Share" ng-click="uploadImage('profileImage');">
+        <i class="material-icons blue-text">collections</i>
+      </md-button>
+    </md-card-actions>
+  </md-card>
+
+  <form name="userForm">
+    <md-input-container flex class="md-block m-t-30">
+      <label>First Name</label>
+      <input ng-model="user.fname">
+    </md-input-container>
+
+    <md-input-container flex class="md-block">
+      <label>Last Title</label>
+      <input ng-model="user.lname">
+    </md-input-container>
+
+    <md-datepicker flex ng-model="holiday.date" md-placeholder="Select DOB" layout-margin></md-datepicker>
+
+    <md-input-container flex class="md-block">
+      <label>Address</label>
+      <input ng-model="user.address">
+    </md-input-container>
+
+    <div layout-gt-sm="row">
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>City</label>
+        <input ng-model="user.city">
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>State</label>
+        <md-select ng-model="user.state">
+          <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+            {{state.abbrev}}
+          </md-option>
+        </md-select>
+      </md-input-container>
+
+      <md-input-container class="md-block m-t-30" flex-gt-sm>
+        <label>Postal Code</label>
+        <input name="postalCode" ng-model="user.postalCode" required ng-pattern="/^[0-9]{5}$/" type="number" md-maxlength="5">
+      </md-input-container>
+    </div>
+  </form>
+
+  <md-list flex class="p-t-10">
+    <md-list-item ng-click="navigateTo(setting.extraScreen, $event)" ng-repeat="setting in settings" flex>
+      <i class="material-icons p-3 indigo-text">{{ setting.icon }}</i>
+      <p> {{ setting.name }} </p>
+      <md-switch class="md-secondary" ng-model="setting.enabled"></md-switch>
+    </md-list-item>
+  </md-list>
+
+  <md-button flex class="md-raised md-primary m-t-30" ng-click="submit();" layout-fill>Submit</md-button>
+
+</md-content>

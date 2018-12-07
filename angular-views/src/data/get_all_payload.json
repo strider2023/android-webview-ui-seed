@@ -1,0 +1,50 @@
+[
+  {
+    "id" : 1,
+    "image" : "assets/images/vendor_1.jpg",
+    "name" : "Arun Debnath",
+    "phone" : "9988001100",
+    "aadhar" : "1800 1800 1947",
+    "vendor_ownership" : "Owner",
+    "vendor_type" : "Static",
+    "vending_start_time" : "10:00 am",
+    "vending_close_time" : "7:00 pm",
+    "vendor_goods_type" : "Owned",
+    "service_type" : "Mobile and Recharge",
+    "worker_count" : 1,
+    "loaction_lat" : 23.829321,
+    "location_lng" : 91.277847
+  },
+  {
+    "id" : 2,
+    "image" : "assets/images/vendor_2.jpg",
+    "name" : "Debangan Nath",
+    "phone" : "8890082322",
+    "aadhar" : "1800 2342 4544",
+    "vendor_ownership" : "Owner",
+    "vendor_type" : "Static",
+    "vending_start_time" : "10:00 am",
+    "vending_close_time" : "7:00 pm",
+    "vendor_goods_type" : "Owned",
+    "service_type" : "Food",
+    "worker_count" : 3,
+    "loaction_lat" : 23.83,
+    "location_lng" : 91.28
+  },
+  {
+    "id" : 3,
+    "image" : "assets/images/vendor_3.jpg",
+    "name" : "Debanjan Bhattacharya",
+    "phone" : "9887654321",
+    "aadhar" : "1432 1800 1943",
+    "vendor_ownership" : "Owner",
+    "vendor_type" : "Static",
+    "vending_start_time" : "10:00 am",
+    "vending_close_time" : "7:00 pm",
+    "vendor_goods_type" : "Owned",
+    "service_type" : "Pan Store",
+    "worker_count" : 1,
+    "loaction_lat" : 23.85,
+    "location_lng" : 91.22
+  }
+]

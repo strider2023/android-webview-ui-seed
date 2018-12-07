@@ -1,0 +1,210 @@
+/**
+ *  Do not remove the comment below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+@import "../assets/styles/mixins";
+@import "../assets/styles/color";
+@import "../assets/styles/variables";
+@import "../assets/styles/global";
+@import "../assets/styles/breakpoints"; //@import '../assets/styles/bottom-nav';
+// @import '~material-bottom-nav';
+// .bottom-nav {
+//   @include bottom-nav($background-color: color('grey', 'lighten-3'), $active-color: #FFFFFF, $inactive-color: #000, $hide-inactive-labels: false);
+// }
+//@import "modules/aim/aim";
+/* margin and padding */
+@include generate-pad-mar(120, bottom, b, 1);
+@include generate-pad-mar(120, top, t, 1);
+@include generate-pad-mar(120, right, r, 1);
+@include generate-pad-mar(120, left, l, 1);
+@include generate-pad-mar-all(120, 1); /* BEGIN Black Italic */
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url("../assets/fonts/material-design-icons/MaterialIcons-Regular.eot");
+	src: local('Material Icons'), local('MaterialIcons-Regular'), url("../assets/fonts/material-design-icons/MaterialIcons-Regular.woff2") format('woff2'), url("../assets/fonts/material-design-icons/MaterialIcons-Regular.woff") format('woff'), url("../assets/fonts/material-design-icons/MaterialIcons-Regular.ttf") format('truetype');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	/* Preferred icon size */
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+
+html {
+	font-family: "Roboto", sans-serif;
+}
+
+.overflow-h {
+	overflow: hidden;
+}
+
+.overflow-auto {
+	overflow: auto;
+}
+
+.t-center {
+	text-align: center;
+}
+
+.box-shadow-none {
+	box-shadow: none !important;
+}
+
+iframe {
+	border: none;
+}
+//[layout=row] {
+//  flex-direction: row;
+//}
+
+[layout-xs=column-reverse] {
+	@include breakpoint(smallphones) {
+		flex-direction: column-reverse;
+	}
+}
+
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+md-toolbar.md-default-theme {
+	background-color: black;
+}
+
+section.jumbotron {
+	margin-bottom: 30px;
+	padding: 1px 30px;
+	background-color: #5aadbb;
+	text-align: center;
+	color: white;
+
+	h1 {
+		font-size: 3em;
+	}
+}
+
+.techs {
+	display: flex;
+	flex-flow: row wrap;
+
+	md-card {
+		width: 30%;
+
+		img.pull-right {
+			float: right;
+			width: 100px;
+		}
+	}
+}
+
+.lineH_1p5 {
+	line-height: 1.5;
+}
+
+.lineH_1p6 {
+	line-height: 1.6;
+}
+
+.lineH_1p7 {
+	line-height: 1.7;
+}
+
+.lineH_1p8 {
+	line-height: 1.8;
+}
+
+.lineH_1p9 {
+	line-height: 1.9;
+}
+
+.lineH_2p0 {
+	line-height: 2.0;
+}
+// Header
+
+.header {
+	background: $primaryColor !important;
+
+	& h2,
+	md-icon {
+		color: $primaryTextColor;
+	}
+}
+//footerBG
+
+.footer {
+	background: $primaryColor !important;
+
+	& h1,
+	md-icon {
+		color: $primaryTextColor;
+	}
+}
+
+.md-toolbar-tools {
+	h2 {
+		color: $primaryTextColor;
+	}
+}
+// Tab Active
+
+md-tab-content {
+	.md-tab {
+		& span,
+		md-icon {
+			color: black !important;
+		}
+
+		&.md-active {
+			& span,
+			md-icon {
+				color: blue !important;
+			}
+
+			& .md-ink-bar {
+				background: black !important;
+			}
+		}
+	}
+}
+
+#main {
+	height: 40vw;
+	overflow-y: scroll;
+}
+
+#map {
+	height: 100%;
+	width: 50vw;
+	z-index: 10;
+}
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

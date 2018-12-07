@@ -1,0 +1,122 @@
+@mixin breakpoint($class) {
+	@if $class==tabLandscape {
+		@media (max-width: 667px) and (orientation: landscape) {
+			@content;
+		}
+	}
+	@else if $class==portrait {
+		@media (orientation: portrait) {
+			@content;
+		}
+	}
+	@else if $class==landscape {
+		@media (orientation: landscape) {
+			@content;
+		}
+	}
+	@else if $class==phones {
+		@media (max-width: 767px) {
+			@content;
+		}
+	}
+	@else if $class==smallphones {
+		@media (max-width: 589px) {
+			@content;
+		}
+	}
+	@else if $class==tablets {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+	@else if $class==tab10 {
+		@media (min-width: 1280px) and (min-height: 800px) {
+			@content;
+		}
+	}
+	@else if $class==mdtablet {
+		@media (min-width: 768px) and (max-width: 1200px) {
+			@content;
+		}
+	}
+	@else if $class==tab7land {
+		@media (max-width: 1024px) and (max-height: 600px) {
+			@content;
+		}
+	}
+	@else if $class==tabland {
+		@media (max-width: 1024px) and (max-height: 455px) {
+			@content;
+		}
+	}
+	@else if $class==smalltab {
+		@media (min-width: 768px) and (max-width: 966px) {
+			@content;
+		}
+	}
+	@else if $class==tabport {
+		@media (max-width: 767px) and (max-height: 768px) {
+			@content;
+		}
+	}
+	@else if $class==tab {
+		@media (max-width: 600px) and (min-height: 800px) {
+			@content;
+		}
+	}
+	@else if $class==desktops {
+		@media (min-width: 992px) {
+			@content;
+		}
+	}
+	@else if $class==lgscreen {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+	@else if $class==mdscreen {
+		@media (min-width: 768px) and (max-width: 1024px) {
+			@content;
+		}
+	}
+	@else if $class==xsscreen {
+		@media (min-width: 200px) and (max-width: 456px) {
+			@content;
+		}
+	}
+	@else if $class==xs {
+		@media (min-width: 200px) and (max-width: 340px) {
+			@content;
+		}
+	}
+	@else if $class==sm {
+		@media (min-width: 360px) and (max-width: 640px) {
+			@content;
+		}
+	}
+	@else if $class==md {
+		@media (min-width: 641px) and (max-width: 1024px) {
+			@content;
+		}
+	}
+	@else if $class==lg {
+		@media (min-width: 1025px) and (max-width: 1200px) {
+			@content;
+		}
+	}
+	@else if $class==xsport {
+		@media (min-width: 200px) and (max-width: 340px) and (orientation:portrait) {
+			@content;
+		}
+	}
+	@else if $class==smport {
+		@media (min-width: 360px) and (max-width: 640px) and (orientation:portrait) {
+			@content;
+		}
+	}
+	@else if $class==mdport {
+		@media (min-width: 641px) and (max-width: 1024px) and (orientation:portrait) {
+			@content;
+		}
+	}
+}

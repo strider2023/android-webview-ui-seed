@@ -1,0 +1,25 @@
+<md-dialog class="login-dialog m-0 p-0 info-dailog-wrap" aria-label="Login" ng-cloak>
+  <md-dialog-content class="m-0 p-0">
+    <div class="md-dialog-content m-0 p-0">
+      <md-card class="white m-0 p-0">
+        <div id="cardInfo" class="md-media-sm card-media t-left md-padding" layout="row" layout-align="space-between center">
+
+          <div class="image_wrap" flex="30">
+            <img src="{{info.image}}" class="md-card-image white p-5" alt="thumb">
+          </div>
+
+          <div class="p-l-5" flex="70">
+            <span class="md-headline" ng-bind="info.title"></span>
+            <p ng-bind="info.description"></p>
+          </div>
+
+        </div>
+
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button id="dismiss_btn" ng-click="cancel()" class="red-text m-l-10">DISMISS</md-button>
+        </md-card-actions>
+
+      </md-card>
+    </div>
+  </md-dialog-content>
+</md-dialog>

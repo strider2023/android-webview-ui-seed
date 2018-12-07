@@ -1,0 +1,258 @@
+@import "mixins";
+@import "breakpoints";
+@import "variables";
+.h {
+	cursor: pointer;
+}
+
+.b-r-0 {
+	border-radius: 0 !important;
+}
+
+.b-s-0 {
+	box-shadow: none;
+}
+
+.p0 {
+	padding: 0 !important;
+}
+
+.m-auto {
+	margin: auto !important;
+}
+
+.m0 {
+	margin: 0 !important;
+}
+
+.r-0 {
+	right: 0 !important;
+}
+
+.overflow-v {
+	overflow: visible !important;
+}
+
+.fontWN {
+	font-weight: normal;
+}
+
+@include breakpoint(smallphones) {
+	.m-s-0 {
+		margin: 0 !important;
+	}
+	.p-s-0 {
+		padding: 0 !important;
+	}
+	.m-s-auto {
+		margin: auto !important;
+	}
+}
+
+;
+.w100 {
+	width: 100% !important;
+}
+
+.w90 {
+	width: 90% !important;
+}
+
+.h100 {
+	height: 100% !important;
+}
+
+.h50 {
+	height: 90% !important;
+}
+
+.h60 {
+	height: 90% !important;
+}
+
+.h70 {
+	height: 90% !important;
+}
+
+.h80 {
+	height: 90% !important;
+}
+
+.h90 {
+	height: 90% !important;
+}
+
+.minH40VH {
+	height: 40vh !important;
+}
+
+.minH35VH {
+	height: 35vh !important;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.minH70 {
+	min-height: 70%;
+	@include breakpoint(phones) {
+		height: 100vh;
+		overflow: auto;
+	}
+	;
+}
+
+.responsive-img {
+	max-width: 100%;
+}
+
+.over-flow-h {
+	overflow: hidden;
+	;
+}
+
+.over-flow-xh {
+	overflow-x: hidden;
+}
+
+.over-flow-yh {
+	overflow-y: hidden;
+}
+
+.overflow-v {
+	overflow: visible !important;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.table-stripped {
+	th,
+	td {
+		padding: 15px;
+	}
+}
+
+.opt-cir-title {
+	min-width: 40px;
+	height: 40px;
+	margin: 10px;
+	border-radius: 50%;
+	font-size: 18px;
+}
+
+@include breakpoint(smallphones) {
+	// .h100, .h90, .h80, .h70, .h60, .h50{
+	//   height: auto !important;
+	// }
+	.layout-xs-wrap {
+		flex-wrap: wrap;
+	}
+	.minH300-xs {
+		min-height: 300px;
+		height: auto !important;
+	}
+	.h300-xs {
+		height: 300px !important;
+	}
+	.h200-xs {
+		height: 200px !important;
+	}
+	.xs-mainTitle {
+		font-size: 26px;
+	}
+}
+
+
+/* Variable based Global Classes */
+
+md-dialog-actions {
+	background-color: $bodyColor !important;
+}
+
+.primaryColor {
+	background-color: $primaryColor !important;
+	color: $primaryTextColor !important;
+	.textColor {
+		color: $primaryTextColor !important;
+	}
+}
+
+.primaryTextColor {
+	color: $primaryTextColor !important;
+}
+
+.secondaryColor {
+	background-color: $secondaryColor !important;
+	color: $secondaryTextColor !important;
+	.textColor {
+		color: $secondaryTextColor !important;
+	}
+}
+
+.secondaryTextColor {
+	color: $secondaryColor !important;
+}
+
+.buttonColor {
+	background-color: $buttonColor !important;
+	color: $buttonTextColor !important;
+	.textColor {
+		color: $buttonTextColor !important;
+	}
+}
+
+.successColor {
+	background-color: $successColor !important;
+	color: $successTextColor !important;
+	.textColor {
+		color: $successTextColor !important;
+	}
+}
+
+.successTextColor {
+	color: $successColor !important;
+}
+
+.errorColor {
+	background-color: $errorColor !important;
+	color: $errorTextColor !important;
+	.textColor {
+		color: $errorTextColor !important;
+	}
+}
+
+.errorTextColor {
+	color: $errorColor !important;
+}
+
+.warningColor {
+	background-color: $warningColor !important;
+	color: $warningTextColor !important;
+	.textColor {
+		color: $warningTextColor !important;
+	}
+}
+
+.warningTextColor {
+	color: $warningColor !important;
+}
+
+.h2 {
+	font-size: $h2-fontSize !important;
+}
+
+.md-button {
+	&.md-warn {
+		&.md-fab {
+			background-color: $buttonColor !important;
+			color: $buttonTextColor !important;
+		}
+	}
+}
